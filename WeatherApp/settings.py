@@ -35,6 +35,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 # Application definition
 
 DJANGO_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -125,3 +126,14 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Weather App",
+    "site_header": "Weather",
+    "site_brand": "Weather Administration",
+    "welcome_sign": "Welcome to Weather App",
+    "copyright": "Weather App Ltd",
+}
+JAZZMIN_UI_TWEAKS = {
+    "theme": "journal",
+}
