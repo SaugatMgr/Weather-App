@@ -65,7 +65,7 @@ ROOT_URLCONF = "WeatherApp.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -126,6 +126,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+WEATHER_API_KEY = env.str("WEATHER_API_KEY")
 
 JAZZMIN_SETTINGS = {
     "site_title": "Weather App",
