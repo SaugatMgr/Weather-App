@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-lg p-4" style="width: 28rem;">
+            <div class="card-body text-center">
+                {% if error %}
+                    <p class="text-danger fw-bold">{{ error }}</p>
+                {% endif %}
+                {% if weather_data %}
+                    <h4 class="card-title fw-bold">{{ weather_data.city }}</h4>
+                    <div class="mb-3">
+                        <i class="fas fa-cloud-sun fa-3x text-warning"></i>
+                    </div>
+                    <h2 class="display-4 fw-bold text-primary">{{ weather_data.temp }}</h2>
+                    <p class="lead">Feels Like: <span class="fw-bold">{{ weather_data.feels_like }}</span></p>
+                    <hr>
+                    <p class="mb-1 text-danger">High: <span class="fw-bold">{{ weather_data.temp_max }}</span></p>
+                    <p class="mb-3 text-info">Low: <span class="fw-bold">{{ weather_data.temp_min }}</span></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
