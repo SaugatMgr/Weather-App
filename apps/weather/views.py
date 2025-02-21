@@ -38,7 +38,7 @@ def index(request):
     user_location_data = requests.get("https://ipinfo.io/json").json()
     city = user_location_data.get("city")
     context = get_weather_data_by_city(city)
-    return render(request, "user_location_weather.html", context)
+    return render(request, "weather_by_city.html", context)
 
 
 def weather_by_city(request):
