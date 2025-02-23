@@ -57,7 +57,11 @@ Then follow the following steps:
         ```bash
         python manage.py createsuperuser
         ```
-2. **Run the server:**
+2. **Migrate Changes:**
+    ```bash
+    python manage.py migrate
+    ```
+3. **Run the server:**
     ```bash
     python manage.py runserver
     ```
