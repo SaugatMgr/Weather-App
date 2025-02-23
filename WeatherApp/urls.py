@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("apps.weather.urls")),
+    path("api/v1/", include("apps.weather.api.v1.urls.urls")),
 ]
 
 if settings.DEBUG:
