@@ -2,10 +2,7 @@ import requests
 from django.shortcuts import render
 from django.conf import settings
 
-
-def kelvin_to_celsius(kelvin):
-    kelvin = float(kelvin)
-    return f"{round(kelvin - 273.15, 3)} °C"
+from utils.helpers import kelvin_to_celsius
 
 
 def get_weather_data_by_city(city):
