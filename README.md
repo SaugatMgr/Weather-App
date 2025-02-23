@@ -48,6 +48,7 @@ DEBUG=True
 ALLOWED_HOSTS=*
 DATABASE_URL=postgres://db_user:db_password@localhost:db_port_number/db_name
 WEATHER_API_KEY=your_weather_api_key
+CORS_ALLOW_ALL_ORIGINS=True # for mobile app to send requests to django rest framework api
 ```
 
 Then follow the following steps:
